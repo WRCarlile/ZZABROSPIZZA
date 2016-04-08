@@ -45,8 +45,8 @@ $(document).ready(function() {
   var newOrder = new Order(inputtedSize, inputtedToppings);
   var total = newOrder.addSize() + newOrder.addTopping()
   console.log(newOrder);
-
-  $("#result h3").text(inputtedSize + "" + inputtedToppings);  //h4 is last here because if you look at the HTML, #result is the parent
+  $("#result h2").text("Your Pizza Reciept");
+  $("#result h3").text(inputtedSize + " " + inputtedToppings);  //h4 is last here because if you look at the HTML, #result is the parent
   $("#price").text("$" + total);  //in this case, p comes first because it's the parent
 
 

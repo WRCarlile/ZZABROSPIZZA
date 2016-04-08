@@ -1,0 +1,7 @@
+.jumbotron {
+  background-image: url('../img/kitesurfers.jpg');
+  background-attachment: fixed;
+
+  margin-bottom:0px;
+  color: white;
+}
