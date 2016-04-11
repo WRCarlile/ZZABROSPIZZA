@@ -1,7 +1,6 @@
-.jumbotron {
-  background-image: url('../img/kitesurfers.jpg');
-  background-attachment: fixed;
-
-  margin-bottom:0px;
-  color: white;
+#zza {
+  display: none;
+}
+.kite {
+  padding: 10px;
 }

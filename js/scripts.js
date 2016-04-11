@@ -10,15 +10,15 @@ var orderTopping =0;
 
 Order.prototype.addSize = function() {
 
-  if (this.pizzaSize === "XXTRA Large $25"){
+  if (this.pizzaSize === "XXTRA Large"){
     return orderSize + 25
-  } else if (this.pizzaSize === "Large $20") {
+  } else if (this.pizzaSize === "Large") {
     return orderSize + 20
-  } else if (this.pizzaSize === "Medium $15") {
+  } else if (this.pizzaSize === "Medium") {
     return orderSize + 15
-  } else if (this.pizzaSize === "Small $12") {
+  } else if (this.pizzaSize === "Small") {
     return orderSize + 12
-  } else if (this.pizzaSize === "Personal $10") {
+  } else if (this.pizzaSize === "Personal") {
     return orderSize + 10
   } else {
     return orderSize
@@ -26,9 +26,9 @@ Order.prototype.addSize = function() {
 }
 
 Order.prototype.addTopping = function() {
-  if (this.pizzaTopping === "Pepperoni $1 Extra") {
+  if (this.pizzaTopping === "Pepperoni") {
   return orderTopping + 1
-} else if (this.pizzaTopping === "Sausage $2 Extra") {
+} else if (this.pizzaTopping === "Sausage") {
   return orderTopping + 2
 } else {
   return orderTopping
@@ -41,16 +41,13 @@ $(document).ready(function() {
     event.preventDefault();
 
   var inputtedSize= $("#size").val();
-  var inputtedToppings = $("#toppings").val();
+  var inputtedToppings = $("#topping").val();
   var newOrder = new Order(inputtedSize, inputtedToppings);
   var total = newOrder.addSize() + newOrder.addTopping()
   console.log(newOrder);
-  $("#result h2").text("Your Pizza Reciept");
-  $("#result h3").text(inputtedSize + " " + inputtedToppings);  //h4 is last here because if you look at the HTML, #result is the parent
-  $("#price").text("$" + total);  //in this case, p comes first because it's the parent
-
-
-
-
+  $("#result h2").text("Your Order is:");
+  $("#result h3").text(inputtedSize + " " + inputtedToppings);
+  $("#price").text("$" + total);
+  $("#zza").show();
   });
 });

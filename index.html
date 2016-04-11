@@ -11,52 +11,53 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <center><h1>ZZA Bros <img src="img/extreme.png" Pizza</h1>
-        <p>Hood River's #1 Windsurfing Pizza Joint</p>
-      </center>
-      </div>
-        <div class="row">
-          <div class="col-md-6">
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <center><h1>ZZA Bros <img src="img/imgres.jpg"> Pizza</h1>
+          <p>Hood River's #1 Kitesurfing Pizza Joint</p></center>
+        </div>
+        <div class="col-md-6">
+          <img src="img/kitesurfers.jpg" class="img-responsive center-block img-rounded kite">
+        </div>
+          <div class="col-md-12">
             <h2></h2>
             <form id="custom">
               <div class = "form-group">
                 <label for="size-group">Customize your Pizza</label>
                 <br>
                 <select id="size" class="form-control">
-                  <option disabled selected>Select You Size</option>
-                  <option>XXTRA Large $25</option>
-                  <option>Large $20</option>
-                  <option>Medium $15</option>
-                  <option>Small $12</option>
-                  <option>Personal $10</option>
+                  <option>XXTRA Large</option>
+                  <option>Large</option>
+                  <option>Medium</option>
+                  <option>Small</option>
+                  <option>Personal</option>
                 </select>
               </div>
               <br>
-              <div class = "form-group">
-                <label for="toppings-group">Choose Your Toppings</label>
-                <br>
-                <select id="toppings" class="form-control">
-                  <option disabled selected>Choose Pizza Toppings</option>
-                  <option>Cheese</option>
-                  <option>Pepperoni $1 Extra</option>
-                  <option>Sausage $2 Extra</option>  <!--these values are numbers that represent the discounts that will be subtracted from the regPrice!-->
+              <div class="form-group">
+                <h4> Choose Your Toppings</h4>
+                <select id="topping" class="form-control">
+                  <option>Cheese</input>
+                  <option value="Pepperoni">Pepperoni</option>
+                  <option value="Sausage">Sausage</option>
                 </select>
               </div>
               <br>
-
               <br>
-              <button type="submit" id="button" class="btn btn-info">Click here to Order</button>
+              <button type="submit" id="button" class="btn btn-danger">Click here to Order</button>
+              <br>
+              <br>
             </form>
             <div id="result">
               <h2></h2>
-              <br>
-              <br>
               <h3></h3>
               <h4></h4>
-                <br>
-                <br>
               <p id="price"></p>
+              <div id="zza">
+                <img src="img/pizzaslice2.jpeg">
+              </div>
             </div>
           </div>
         </div>
