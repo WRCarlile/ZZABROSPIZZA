@@ -7,7 +7,6 @@ function Order(pizzaSize, pizzaTopping) {
 var orderSize = 0;
 var orderTopping =0;
 
-
 Order.prototype.addSize = function() {
 
   if (this.pizzaSize === "XXTRA Large"){
@@ -26,14 +25,9 @@ Order.prototype.addSize = function() {
 }
 
 Order.prototype.addTopping = function() {
-  if (this.pizzaTopping === "Pepperoni") {
-  return orderTopping + 1
-} else if (this.pizzaTopping === "Sausage") {
-  return orderTopping + 2
-} else {
-  return orderTopping
-  }
+  return this.pizzaTopping + orderTopping
 }
+
 //user interface logic
 $(document).ready(function() {
 
@@ -41,13 +35,15 @@ $(document).ready(function() {
     event.preventDefault();
 
   var inputtedSize= $("#size").val();
-  var inputtedToppings = $("#topping").val();
-  var newOrder = new Order(inputtedSize, inputtedToppings);
+  var inputtedToppings = $('#custom input[type="checkbox"]');
+  var countBox = inputtedToppings.filter(':checked').length;
+  var newOrder = new Order(inputtedSize, countBox);
   var total = newOrder.addSize() + newOrder.addTopping()
-  console.log(newOrder);
+
   $("#result h2").text("Your Order is:");
-  $("#result h3").text(inputtedSize + " " + inputtedToppings);
+  $("#result h3").text("A " + inputtedSize + " Pizza");
   $("#price").text("$" + total);
   $("#zza").show();
+
   });
 });
